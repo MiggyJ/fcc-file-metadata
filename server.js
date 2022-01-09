@@ -26,7 +26,7 @@ app.use('/public', express.static(process.cwd() + '/public'));
 
 app.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
   res.send({
-    filename: req.file.originalname,
+    name: req.file.originalname,
     size: parseInt(req.file.size),
     type: req.file.mimetype
   })
